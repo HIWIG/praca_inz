@@ -72,7 +72,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Zeskanuj kartę RFID</p>
-                            <input onkeyup="barcodeRead()" class="form-control" type="text" id="rcpNumber">
+                            <input onkeyup="rcpRead()" class="form-control" type="text" id="rcpNumber">
                         </div>
                         <div class="modal-footer" >
                             <button id="close-modal" type="button" class="btn btn-default" data-dismiss="modal">Close
@@ -94,7 +94,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Zeskanuj kartę RFID</p>
-                            <input onkeyup="barcodeRead2()" class="form-control" type="text" id="rcpNumber2">
+                            <input onkeyup="rcpRead2()" class="form-control" type="text" id="rcpNumber2">
                         </div>
                         <div class="modal-footer" >
                             <button id="close-modal" type="button" class="btn btn-default" data-dismiss="modal">Close

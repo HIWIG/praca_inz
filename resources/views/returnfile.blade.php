@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dodawanie teczki</title>
+    <title>Pobieranie teczki</title>
 
 
 
@@ -24,55 +24,13 @@
 </div>
 <div class="container">
     <div class="col-12">
-        <form action="{{'add-file'}}" method="post" class="form-signin">
-            <h1 class="h3 mb-3 font-weight-normal pt-8">Tworzenie teczki</h1>
-            @if(Session::has('success'))
-                <div class="alert alert-success">{{Session::get('success')}}</div>
-            @endif
-            @if(Session::has('fail'))
-                <div class="alert alert-danger">{{Session::get('fail')}}</div>
-            @endif
-            @csrf
-{{--            <div class="pt-3">--}}
-{{--                <label for="email" class="sr-only ">email</label >--}}
-{{--                <input type="text" name="email" value="{{old('email')}}" placeholder="Adres E-mail"  class="form-control">--}}
-{{--                <span class="text-danger">@error('email'){{$message}} @enderror</span>--}}
-{{--            </div>--}}
-            <div class="pt-3">
-                <label for="name" class="sr-only">name</label>
-                <input type="text" name="name" value="" placeholder="Nazwa"  class="form-control">
-                <span class="text-danger">@error('name'){{$message}} @enderror</span>
-            </div>
-{{--            <div class="pt-3">--}}
-{{--                <label for="locationId" class="sr-only">pass</label>--}}
-{{--                <input type="text" name="locationId" value="" placeholder="Id Lokalizacji"  class="form-control">--}}
-{{--                <span class="text-danger">@error('locationId'){{$message}} @enderror</span>--}}
-{{--            </div>--}}
-            <div class="pt-3">
-            <select  for="locationId" class="form-control" name="locationId">
-                @foreach($locations as $loc)
-                    <option value="{{$loc->id}}">{{$loc->name}}</option>
-                @endforeach
-            </select>
-            </div>
-{{--            <div class="form-group">--}}
-{{--                <label for="location_id">Lokalizacja:</label>--}}
-{{--                <select class="form-control" name="location_id">--}}
-{{--                    @foreach($locations as $location)--}}
-{{--                        <option value="{{ $location->id }}">{{ $location->name }}</option>--}}
-{{--                    @endforeach--}}
-{{--                </select>--}}
-{{--            </div>--}}
+        <form action="{{'take-file'}}" method="post" class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal pt-8">Pobieranie teczki</h1>
 
-{{--            <div class="form-group">--}}
-{{--                <label for="locationId">Lokalizacja:</label>--}}
-{{--                <select class="form-control" name="location_id">--}}
-{{--                    <option value="">-- wybierz lokalizację --</option>--}}
-{{--                    @foreach($locations as $id => $name)--}}
-{{--                        <option value="{{ $id }}">{{ $name }}</option>--}}
-{{--                    @endforeach--}}
-{{--                </select>--}}
-{{--            </div>--}}
+
+            <div class="pt-3">
+
+
 
 
             <div class="pt-3">
@@ -152,6 +110,14 @@
                 <input type="text" name="description" value="" placeholder="Opis"  class="form-control">
                 <span class="text-danger">@error('name'){{$message}} @enderror</span>
             </div>
+
+                <div class="pt-3">
+                    <select  for="locationId" class="form-control" name="locationId">
+                        @foreach($locations as $loc)
+                            <option value="{{$loc->id}}">{{$loc->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
 
             <div class="pt-3">
                 <button type="submit" class="btn btn-lg btn-primary btn-block pt-8">Dodaj dokument</button>

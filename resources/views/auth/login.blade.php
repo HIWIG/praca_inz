@@ -45,13 +45,9 @@
                 <div class="pt-3">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalRcpOsoba" onclick="focusInput()">Skanuj kartę RCP:
                     </button>
-
                 </div>
-
-
                 <span class="text-danger">@error('rcpNumber'){{$message}} @enderror</span>
             </div>
-
             <div id="ModalRcpOsoba" class="modal btn-lg" role="dialog">
                 <div class="modal-dialog">
                     <!-- Modal content-->
@@ -63,14 +59,13 @@
                         </div>
                         <div class="modal-body">
                             <p>Zeskanuj kartę RCP</p>
-                            <input onkeyup="barcodeRead()" class="form-control" type="text" id="rcpNumber">
+                            <input onkeyup="rcpRead()" class="form-control" type="text" id="rcpNumber">
                         </div>
                         <div class="modal-footer" >
                             <button id="close-modal" type="button" class="btn btn-default" data-dismiss="modal">Close
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -79,7 +74,7 @@
             </div>
         </form>
     </div>
-    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

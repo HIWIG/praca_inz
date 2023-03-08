@@ -64,6 +64,10 @@ class FileController extends Controller
     {
         return view("addfile");
     }
+    public function returnfile()
+    {
+        return view("returnfile");
+    }
     public function takefile()
     {
         return view("takefile");
@@ -103,6 +107,11 @@ class FileController extends Controller
         $locations = Location::cursor();
         return view('addfile', compact('locations'));
     }
+    public function create2(Request $request)
+    {
+        $locations = Location::cursor();
+        return view('returnfile', compact('locations'));
+    }
 
     /**
      * Display the specified resource.
@@ -117,6 +126,7 @@ class FileController extends Controller
 
         return view('files', compact('files'));
     }
+
 //    public function getSession(){
 //        $userId=Session::get(userId);
 //        return view('\files',['userId'=>$userId]);

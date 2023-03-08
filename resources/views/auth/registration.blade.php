@@ -67,7 +67,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Zeskanuj kartę RCP</p>
-                            <input onkeyup="barcodeRead()" class="form-control" type="text" id="rcpNumber">
+                            <input onkeyup="rcpRead()" class="form-control" type="text" id="rcpNumber">
                         </div>
                         <div class="modal-footer" >
                             <button id="close-modal" type="button" class="btn btn-default" data-dismiss="modal">Close

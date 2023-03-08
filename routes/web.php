@@ -66,6 +66,7 @@ Route::post('/take-file',[FileController::class,'takeFilePost'])->name('take-fil
 Route::get('/files',[FileController::class, 'show'])->name('show')->middleware('isLoggedIn');
 Route::get('/changes',[ChangeController::class, 'show'])->middleware('isLoggedIn');
 
+Route::get('/returnfile',[FileController::class, 'create2'])->name('returnfile')->middleware('isLoggedIn');
 //Route::post("user",[UserAuth::class,'userLogin']);
 
 //Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');

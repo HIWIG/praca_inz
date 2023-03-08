@@ -6,12 +6,9 @@
 function focusInput() {
     document.getElementById("rcpNumber").focus();
 }
-function barcodeRead() {
-
-    let inputStart, inputStop;
+function rcpRead() {
 
     $("#rcpNumber")[0].onpaste = e => e.preventDefault();
-    // handle a key value being entered by either keyboard or scanner
     var lastInput
 
     let checkValidity = () => {
@@ -39,7 +36,6 @@ function barcodeRead() {
 }
 function modalClose() {
     $('.modal-overlay').hide();
-    //hides all modal boxes when escape key pressed
     $('.modal').modal('hide');
 }
 $('#ModalRcpOsoba').on('shown.bs.modal', function(e) {
@@ -51,12 +47,10 @@ function focusInput2() {
 
 }
 
-function barcodeRead2() {
+function rcpRead2() {
 
-    let inputStart, inputStop;
 
     $("#rcpNumber2")[0].onpaste = e => e.preventDefault();
-    // handle a key value being entered by either keyboard or scanner
     var lastInput
 
     let checkValidity = () => {
