@@ -59,7 +59,7 @@
             <tr>
                 <td>{{ $change->changeId }}</td>
                 <td>{{ $change->fileName }}</td>
-                <td>{{ $change->userName }}</td>
+                <td>{{ $change->rcpNumber }}</td>
                 <td>{{ $change->type }}</td>
                 <td>{{ $change->changeTime }}</td>
             </tr>

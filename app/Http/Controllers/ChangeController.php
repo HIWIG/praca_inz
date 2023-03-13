@@ -49,7 +49,7 @@ class ChangeController extends Controller
     public function show(Change $change)
     {
 //        $changes = Change::join('users', 'changes.userId','=','users.id')->select('changes.id as changeId', 'users.name as userName', 'changes.type','changes.changeTime' )->get()
-        $changes = Change::join('users', 'changes.userId','=','users.id')->join('files', 'files.id','=','changes.fileId')->select('changes.id as changeId', 'users.name as userName', 'changes.type','changes.changeTime', 'files.name as fileName')->get();
+        $changes = Change::join('users', 'changes.userId','=','users.id')->join('files', 'files.id','=','changes.fileId')->select('changes.id as changeId', 'users.name as userName', 'changes.type','changes.changeTime', 'files.name as fileName', 'files.rcpFileNumber as rcpNumber')->get();
 
         return view('changes', compact('changes'));
     }

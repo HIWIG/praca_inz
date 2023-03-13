@@ -12,11 +12,11 @@
                 field: 'Wyrób',
                 title: 'Nr Wyrobu'
             },{
-                field: 'user',
+                field: 'rcpNumber',
                 title: 'Numer RFID Dokumentu'
             },{
                 field: 'type',
-                title: 'Numer RFID Dokumentu'
+                title: 'Typ zmiany'
             },
                 {
                 field: 'changeDate',

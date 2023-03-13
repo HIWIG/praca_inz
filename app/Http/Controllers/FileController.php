@@ -95,6 +95,28 @@ class FileController extends Controller
 
         return back();
     }
+    public function returnFilePost(Request $request)
+    {
+
+        $userId = Auth::id();
+
+
+
+        $changes = new Change();
+        $file = DB::table('file')->where('files.rcpFileNumber',$request->fileId)->update(['locationId'=>2]);
+        $changes-> fileId = $file->id;
+        $changes-> userId = $userId;
+
+
+        $changes-> changeTime = Carbon::now();
+        $changes->type=3;
+        $changes->description = $request ->description;
+
+
+        $changes->save();
+
+        return back();
+    }
 
     /**
      * Store a newly created resource in storage.

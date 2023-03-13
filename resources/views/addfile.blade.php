@@ -55,25 +55,6 @@
                 @endforeach
             </select>
             </div>
-{{--            <div class="form-group">--}}
-{{--                <label for="location_id">Lokalizacja:</label>--}}
-{{--                <select class="form-control" name="location_id">--}}
-{{--                    @foreach($locations as $location)--}}
-{{--                        <option value="{{ $location->id }}">{{ $location->name }}</option>--}}
-{{--                    @endforeach--}}
-{{--                </select>--}}
-{{--            </div>--}}
-
-{{--            <div class="form-group">--}}
-{{--                <label for="locationId">Lokalizacja:</label>--}}
-{{--                <select class="form-control" name="location_id">--}}
-{{--                    <option value="">-- wybierz lokalizację --</option>--}}
-{{--                    @foreach($locations as $id => $name)--}}
-{{--                        <option value="{{ $id }}">{{ $name }}</option>--}}
-{{--                    @endforeach--}}
-{{--                </select>--}}
-{{--            </div>--}}
-
 
             <div class="pt-3">
                 <label class="sr-only" for="rcpNumber">rcpNumber</label>
